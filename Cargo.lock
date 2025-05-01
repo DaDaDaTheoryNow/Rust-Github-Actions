@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "make_screenshot"
+name = "xor_cypher"
 version = "0.1.0"
