@@ -22,10 +22,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - target: x86_64-unknown-linux-gnu
-            os: ubuntu-latest
-          - target: universal-apple-darwin
-            os: macos-latest
           - target: x86_64-pc-windows-msvc
             os: windows-latest
     runs-on: ${{ matrix.os }}
@@ -44,6 +40,6 @@ jobs:
         if: contains(matrix.os, 'ubuntu')
       - uses: taiki-e/upload-rust-binary-action@v1
         with:
-          bin: make_screenshot
+          bin: xor_cypher
           target: ${{ matrix.target }}
           token: ${{ secrets.GITHUB_TOKEN }}
